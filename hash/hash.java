@@ -38,13 +38,5 @@ class Solution {
         System.out.println(
         "Test Case 3: " + (result3 != null ? "[" + result3[0] + ", " + result3[1] +
         "]" : "No solution"));
-
-        // Additional test case 4
-        int[] nums4 = { 1, 5, 3, 6, 7 };
-        int target4 = 8;
-        int[] result4 = solution.twoSum(nums4, target4);
-        System.out.println(
-        "Test Case 4: " + (result4 != null ? "[" + result4[0] + ", " + result4[1] +
-        "]" : "No solution"));
     }
 }

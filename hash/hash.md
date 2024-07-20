@@ -1,8 +1,8 @@
-## 哈希表（Hash Table）的理解与作用
+## Hash Table 的理解与作用
 
 ### 哈希表的理解
 
-哈希表（Hash Table）是一种数据结构，通过将键（key）映射到值（value），以便高效地查找、插入和删除操作。哈希表通过哈希函数将键值转换为数组中的索引，以实现快速访问。
+哈希表是一种数据结构，通过将key映射到value，以便高效地查找、插入和删除操作。哈希表通过哈希函数将键值转换为数组中的索引，以实现快速访问。
 
 
 ### 哈希表的作用
@@ -14,11 +14,11 @@
 
 ### 时间复杂度
 
-- **查找**：O(1)
-- **插入**：O(1)
-- **删除**：O(1)
+哈希函数将键映射到哈希表中的一个位置，这个位置称为哈希桶（Hash Bucket）。当需要存储或检索一个键时，哈希表会通过哈希函数计算出键对应的哈希桶位置，然后在该位置进行操作。无论哈希表中存储了多少元素，对于常数个元素的操作，其所需的平均时间是固定的。
+在理想情况下，如果哈希函数能够均匀分布键到表中的位置，那么冲突的概率会很低，查找操作的平均时间复杂度仍然是 O(1)。
+但是，如果所有键都发生了冲突，导致所有键值对都存储在同一个链表中，那么哈希表的性能就会退化到链表的水平，查找操作的时间复杂度变为 O(N)，其中 N 是键值对的总数。
 
-哈希表的时间复杂度为 O(1) 是基于平均情况的假设，即哈希函数能够将键均匀分布在哈希表中，从而避免大量碰撞（collisions）。当发生碰撞时，通过链地址法（chaining）或开放地址法（open addressing）等方法来解决，这些方法在大多数情况下仍能保持较低的时间复杂度。
+当发生碰撞时，通过chaining或open addressing等方法来解决。
 
 ### 哈希表在算法中的作用
 
@@ -28,14 +28,14 @@
 4. **缓存实现**：哈希表常用于实现缓存（如 LRU 缓存）。
 
 
-### 何时使用哈希表（Hashtable）
+### 何时使用哈希表
 
 - **哈希表**：适用于需要快速查找、插入和删除的场景。
 
 
 ### 示例题目
 
-1. **两数之和**：Given an integer array nums and an integer target value target, please find the two integers in the array whose sum is the target value target, and return their array indices.  
+1. **Sum of two numbers**：Given an integer array nums and an integer target value target, please find the two integers in the array whose sum is the target value target, and return their array indices.  
 
 
 Example 1:
@@ -51,5 +51,4 @@ Example 3:
 Input: nums=[3,3], target=6
 Output: [0,1]  
 
-1. **词频统计**：统计一段文本中每个单词出现的次数。使用哈希表可以在 O(n) 时间内完成统计。
-2. **有效的括号**：检查一串括号字符串是否有效。使用哈希表存储括号对，可以快速检查匹配关系。
+1. **词频统计**：统计一段文本中每个单词出现的次数。
